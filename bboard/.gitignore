@@ -1,0 +1,25 @@
+# IDE specific
+.idea/
+.vscode/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+*.sqlite3
+env/
+.env/
+venv/
+.venv/
+.venvdrf/
+.venv_crud/
+.venvperm/
+.venv_test/
+3.1-drf-intro\smart_home\.venvdrf/
+
+### Project specific ###
+settings_local.py
+
+### OS specific ###
+.DS_Store
