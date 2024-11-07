@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ course.title}} {% endblock %}
+
+{% block content %}
+<h1 class="mt-5"> Название курса: {{ course.title }} </h1>
+<h2> Категория курса: {{ course.category}}</h2>
+<p> Стоимость курса: {{ course.price}}</p>
+<p> Количество сдутентов на курсе: {{ course.students_qty}}</p>
+<button class="btn btn-primary">Buy</button>
+{% endblock%}
+
