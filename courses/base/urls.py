@@ -15,25 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from api.models import CourseResource, CategoryResource
-from tastypie.api import Api
 
-# Создаем экземпляры классов
-api = Api(api_name='v1')
-course_resource = CourseResource()
-category_resource = CategoryResource()
-api.register(course_resource)
-api.register(category_resource)
-
-# /api/v1/courses/ GET, POST
-# /api/v1/courses/1/ GET, DELETE
-# /api/v1/categories/ GET
-# /api/v1/categories/1/ GET
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('shop/', include('shop.urls')),
+    path('', include('shop.urls')),
     # path('api/', include(course_resource.urls)),
     # path('api/', include(category_resource.urls))
-    path('api/', include(api.urls))
+    path('api/', include('api.urls'))
 ]
